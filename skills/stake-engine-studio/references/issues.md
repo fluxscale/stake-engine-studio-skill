@@ -18,6 +18,8 @@ python3 scripts/issues.py 'broadcastAsync' --repo web-sdk --kind both
 python3 scripts/issues.py 'replay' --kind both
 ```
 
+For a query beginning with GitHub negation syntax, place helper options before `--`, for example `python3 scripts/issues.py --repo math-sdk -- '-label:bug payout'`. The helper also separates options from query text in its `gh` argument list.
+
 Add `--run` to execute read-only GitHub CLI searches. Unspecified state searches open and closed results; `--state open` or `--state closed` narrows them. Use `--repo` repeatedly for multiple repositories. `--limit` is per query, and results may be truncated; an empty/truncated result is not proof that no issue exists. Authentication/rate-limit failures are reported as failures, not empty findings.
 
 Equivalent commands:

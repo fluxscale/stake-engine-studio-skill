@@ -31,8 +31,10 @@ These are tool argument examples, not shell commands. Discover actual tool avail
 Studio is rendered client-side. HTTP 200, page metadata, or an app-loader is not retrieved documentation. Prefer a rendered browser view or the official source page; report which was used. The helper can fetch allowlisted source pages as raw SVX without executing them:
 
 ```sh
-python3 scripts/docs.py show /docs/api/play --collection source --fetch
+python3 scripts/docs.py show /docs/api/play --collection source --fetch --ref locked
 ```
+
+Omit `--ref` to resolve current `main`, or supply a branch, tag, or full commit SHA. `--ref locked` uses the docs revision in `upstream-lock.json`. Fetch output reports the requested ref, resolved commit, raw URL, and immutable citation URL. A symbolic ref is resolved before content retrieval so a concurrent update cannot change the retrieved revision. If GitHub returns HTTP 403/429 during resolution, the helper tries read-only `gh api` using an existing authenticated installation. Otherwise it reports failure; it never silently substitutes the locked revision for current docs.
 
 For a cloned docs repo, search `src/routes/docs`, `src/routes/faq`, and `src/routes/changelog`. SVX pages may define API tables in a `<script>` block: read these as source data, do not discard them blindly. The source `/docs/example/*` routes are documentation-component demonstrations, not authoritative API contracts. Dynamic checklists may require an authenticated Studio session. Source `static/mockchecklist.json` is demonstrator data, not a team's actual checklist.
 

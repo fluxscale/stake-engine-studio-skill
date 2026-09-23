@@ -2,9 +2,9 @@
 
 ## Startup and transport
 
-Parse `sessionID`, `rgs_url`, `lang`, `device`, and social/replay parameters from the launch URL. Use the supplied RGS host rather than a hardcoded example. Validate URL structure, preserve the intended host, and keep tokens out of logs or public reproduction URLs. Detect public replay before creating a client that authenticates or polls. Source: [RGS details](https://studio.engine.io/docs/rgs).
+Parse `sessionID`, `rgs_url`, `lang`, `currency`, `device`, and `social`/`demo`/`replay` parameters from the launch URL. Use the supplied RGS host rather than a hardcoded example. Validate URL structure, preserve the intended host, and keep tokens out of logs or public reproduction URLs. Detect public replay before creating a client that authenticates or polls. Sources: [RGS details](https://studio.engine.io/docs/rgs), [source launch parameters](https://github.com/engineio/docs/blob/main/src/routes/docs/reference/url-structure/+page.svx). A local `demo=true` flag is not proof that a remote session uses test funds; use a verified test session for testing.
 
-Normal play authenticates first. A resumed `round` can be active or merely the last completed round; check state rather than assuming any returned round needs settlement. Source: [wallet](https://studio.engine.io/docs/rgs/wallet).
+Normal play authenticates first. A resumed `round` can be active or merely the last completed round; check state rather than assuming any returned round needs settlement. Sources: [wallet](https://studio.engine.io/docs/rgs/wallet), [client round types](https://github.com/engineio/ts-client/blob/main/src/types.ts).
 
 | Operation | Method/path | Request fields | Result to handle |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@ Treat the table as a route map; read current schemas and installed types for opt
 
 ## Units and configuration
 
-Wallet amounts use six decimal places: `1_000_000` represents one currency unit, including currencies whose display has zero or three decimals. Bet-mode cost changes the debit: base amount × mode cost. Stored book multipliers use hundredths; API multipliers are a separate representation. Trace conversions once at each boundary and guard JavaScript safe-integer limits. Sources: [RGS money and modes](https://studio.engine.io/docs/rgs), [math artifacts](math-artifacts.md).
+Wallet amounts use six decimal places: `1_000_000` represents one currency unit, regardless of the currency’s display precision. Bet-mode cost changes the debit: base amount × mode cost. Stored book multipliers use hundredths; API multipliers are a separate representation. Trace conversions once at each boundary and guard JavaScript safe-integer limits. Sources: [RGS money and modes](https://studio.engine.io/docs/rgs), [Math SDK RGS units](https://github.com/engineio/math-sdk/blob/main/docs/rgs_docs/RGS.md), [math artifacts](math-artifacts.md).
 
 Use returned `minBet`, `maxBet`, `stepBet`, `defaultBetLevel`, and `betLevels` to populate/validate controls. Test a non-USD configuration and the smallest bet. Do not treat sample JSON amounts as production defaults or multiply cost twice.
 

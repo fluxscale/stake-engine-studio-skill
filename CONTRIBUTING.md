@@ -6,9 +6,9 @@ Keep the skill practical, source-backed, and portable. The task router belongs i
 
 1. Inspect [engineio](https://github.com/engineio) for renamed/new/archived repositories.
 2. Re-read relevant deployed Studio pages and compare the installed SDK's implementation. Use the [source hierarchy](skills/stake-engine-studio/references/sources.md); public docs source is not necessarily the deployed Studio revision.
-3. Update the JSON route index and its Markdown companion together. Keep `studio` routes distinct from source-repo routes. Titles and metadata are navigational; do not vendor full manuals.
+3. Update the JSON route index and its Markdown companion together; validation checks titles, rows, counts, and the shared research baseline date in both inventories and the prose. Keep `studio` routes distinct from source-repo routes. Titles and metadata are navigational; do not vendor full manuals.
 4. Record checked commits/dates in `upstream-lock.json`. Update freshness claims only for the scope actually rechecked. Keep unresolved disagreements visible until evidence resolves them.
-5. Run validation, helper tests, and applicable [behavioral scenarios](tests/scenarios.md). Add a regression case when a real bug changes a helper's behavior.
+5. Run offline validation, opt-in `python3 scripts/validate.py --online` for official GitHub file existence (authenticated `gh` required), helper tests, and applicable [behavioral scenarios](tests/scenarios.md). Add a regression case when a real bug changes a helper's behavior.
 
 Use primary documentation and source permalinks. Report an upstream issue as a hypothesis unless code/reproduction confirms it. Do not freeze issue statuses or approval thresholds without a date and refresh instruction.
 

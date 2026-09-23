@@ -23,7 +23,13 @@ DISABLE_TELEMETRY=1 npx skills add . --list
 
 ## Verify installation
 
-After the public branch contains the skill, list remote discovery:
+Before pushing, confirm the release commit includes `skills/stake-engine-studio/SKILL.md` and its full bundle, not just the README:
+
+```sh
+git ls-tree -r --name-only HEAD -- skills/stake-engine-studio
+```
+
+A local working-tree discovery pass can include untracked files; it does not prove the remote release contains them. After the public branch contains the skill, list remote discovery:
 
 ```sh
 DISABLE_TELEMETRY=1 npx skills add fluxscale/stake-engine-studio-skill --list
@@ -35,7 +41,7 @@ In a disposable project, install and inspect the complete folder:
 DISABLE_TELEMETRY=1 npx skills add fluxscale/stake-engine-studio-skill --skill stake-engine-studio --agent claude-code codex --copy -y
 ```
 
-Do not perform the smoke installation in an unrelated working project. Confirm that both agents discover the skill, references resolve, helper `--help` works, and example prompts select the intended workflow. The root README gives normal user installation commands without disabling telemetry; users may opt out with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`. Sources: [skills CLI](https://github.com/vercel-labs/skills), [telemetry documentation](https://skills.sh/docs/cli).
+Do not perform the smoke installation in an unrelated working project. Confirm that both agents discover the skill, references resolve, helper `--help` works, and example prompts select the intended workflow. The root README gives normal user installation commands without disabling telemetry; users may opt out with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`. Sources: [skills CLI environment variables](https://github.com/vercel-labs/skills#environment-variables) (including `DO_NOT_TRACK`), [telemetry documentation](https://skills.sh/docs/cli).
 
 Once an actual listing exists, verify its URL before adding a listing badge or claiming publication. A public Git repository, a successful install, and a visible skills.sh listing are separate pieces of evidence.
 

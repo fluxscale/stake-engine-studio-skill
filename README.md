@@ -14,7 +14,7 @@ Run in the project where you want the skill available:
 npx skills add fluxscale/stake-engine-studio-skill --skill stake-engine-studio
 ```
 
-Choose your agent in the installer. Add `--global` for a user-wide installation. Preview available skills without installing:
+Choose your agent in an interactive terminal; agent-run installs may be non-interactive. For Claude Code, add `--global` for a user-wide installation. For Codex, use the project install or the manual user-wide path below. Preview available skills without installing:
 
 ```sh
 npx skills add fluxscale/stake-engine-studio-skill --list
@@ -66,7 +66,7 @@ mkdir -p ~/.agents/skills
 cp -R skills/stake-engine-studio ~/.agents/skills/stake-engine-studio
 ```
 
-Use a fresh destination. For project-only manual installation, use your game's `.agents/skills/stake-engine-studio/`. Current official Codex guidance documents `~/.agents/skills` for user-authored skills; the skills CLI may use its own supported compatibility location. Start a new session if the skill does not appear. See [Codex skill discovery](https://developers.openai.com/codex/skills/).
+Use a fresh destination. For project-only manual installation, use your game's `.agents/skills/stake-engine-studio/`. Use the project-scoped CLI command above or this manual user-wide path. The CLI currently targets `~/.codex/skills` for global Codex installs, while current official guidance documents `~/.agents/skills`; global CLI discovery has not been verified here. Start a new session if the skill does not appear. See [Codex skill discovery](https://learn.chatgpt.com/docs/build-skills).
 
 ## What it covers
 
@@ -100,13 +100,13 @@ Explain the difference between game-client RGS calls and operator wallet callbac
 
 ## Helpers
 
-The skill itself needs no runtime. Helpers use Python 3.10+. Read-only issue execution additionally needs authenticated [GitHub CLI](https://cli.github.com/); full compressed-book inspection needs the optional `zstandard` Python package. No credentials are required for local index searches or math checks.
+The skill itself needs no runtime. Helpers use Python 3.10+. Read-only issue execution additionally needs authenticated [GitHub CLI](https://cli.github.com/); full compressed-book inspection needs the optional `zstandard` Python package. No credentials are required for local index searches or math checks. Source fetches report an immutable commit permalink; add `--ref locked` to retrieve the recorded baseline instead of current `main`.
 
 From the repository root:
 
 ```sh
 python3 skills/stake-engine-studio/scripts/docs.py search replay
-python3 skills/stake-engine-studio/scripts/docs.py show /docs/api/play --collection source --fetch
+python3 skills/stake-engine-studio/scripts/docs.py show /docs/api/play --collection source --fetch --ref locked
 python3 skills/stake-engine-studio/scripts/issues.py 'payoutMultiplier' --repo math-sdk
 python3 skills/stake-engine-studio/scripts/issues.py 'payoutMultiplier' --repo math-sdk --run
 python3 skills/stake-engine-studio/scripts/inspect_math.py /path/to/publish_files --books
@@ -135,6 +135,6 @@ python3 -m venv .venv
 DISABLE_TELEMETRY=1 npx skills add . --list
 ```
 
-Windows: use `.venv\Scripts\python.exe` instead of `.venv/bin/python`.
+Windows: use `.venv\Scripts\python.exe` instead of `.venv/bin/python`. CI covers Python 3.10, 3.12, and 3.13 on Ubuntu and Windows, plus skills CLI discovery. To recheck official GitHub source links during maintenance, run `.venv/bin/python scripts/validate.py --online` with authenticated `gh`.
 
 Original skill content and helpers are [MIT licensed](LICENSE). Linked upstream documentation, code, names, and assets remain subject to their respective licenses and ownership.

@@ -22,6 +22,24 @@ class Invalid(ValueError):
     pass
 
 
+def reject_duplicates(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise Invalid(f"Duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+
+def reject_constant(value):
+    raise Invalid(f"Non-finite JSON number: {value}")
+
+
+def load_json(text):
+    return json.loads(text, parse_float=Decimal, parse_constant=reject_constant,
+                      object_pairs_hook=reject_duplicates)
+
+
 def uint(value, label):
     if isinstance(value, str):
         if not re.fullmatch(r"[0-9]+", value):
@@ -45,9 +63,13 @@ def artifact(root, value, suffix):
 
 def load_table(path, db):
     db.execute("CREATE TABLE outcomes (id TEXT PRIMARY KEY, payout TEXT NOT NULL, seen INTEGER NOT NULL DEFAULT 0)")
-    count = total = weighted = winning = zero_weights = maximum = reachable = 0
+    count = total = weighted = weighted_squared = winning = zero_weights = maximum = reachable = 0
     with path.open(newline="", encoding="utf-8") as handle:
         for number, row in enumerate(csv.reader(handle), 1):
+            if number == 1 and row and row[0].startswith("\ufeff"):
+                raise Invalid(f"{path.name}: file starts with a UTF-8 BOM; export without a BOM")
+            if not row or all(not value.strip() for value in row):
+                raise Invalid(f"{path.name}:{number}: blank CSV row")
             if len(row) != 3:
                 raise Invalid(f"{path.name}:{number}: expected exactly three CSV columns without header")
             identifier, weight, payout = [uint(value, f"{path.name}:{number}") for value in row]
@@ -58,6 +80,7 @@ def load_table(path, db):
             count += 1
             total += weight
             weighted += weight * payout
+            weighted_squared += weight * payout * payout
             winning += weight if payout > 0 else 0
             zero_weights += weight == 0
             maximum = max(maximum, payout)
@@ -67,6 +90,7 @@ def load_table(path, db):
         raise Invalid("Lookup table must contain outcomes with positive total weight")
     db.commit()
     return {"outcomes": count, "weight_sum": total, "weighted_payout_sum": weighted,
+            "weighted_payout_squared_sum": weighted_squared,
             "winning_weight": winning, "zero_weight_outcomes": zero_weights,
             "max_recorded_payout": maximum, "max_reachable_payout": reachable}
 
@@ -74,10 +98,17 @@ def load_table(path, db):
 def verify_lines(lines, db):
     count = 0
     for number, line in enumerate(lines, 1):
+        if isinstance(line, bytes):
+            try:
+                line = line.decode("utf-8")
+            except UnicodeDecodeError as exc:
+                raise Invalid(f"Book line {number}: not UTF-8") from exc
+        if isinstance(line, str) and not line.strip():
+            raise Invalid(f"Book line {number}: blank JSONL record")
         try:
-            record = json.loads(line)
+            record = load_json(line)
         except (ValueError, TypeError) as exc:
-            raise Invalid(f"Book line {number}: invalid JSON") from exc
+            raise Invalid(f"Book line {number}: invalid JSON: {exc}") from exc
         if not isinstance(record, dict) or not all(key in record for key in ("id", "events", "payoutMultiplier")):
             raise Invalid(f"Book line {number}: missing required record fields")
         # Book fields must be JSON integers, not numeric strings.
@@ -109,18 +140,24 @@ def compressed_lines(path, zstandard):
     records. decompressobj.eof lets us distinguish a full frame from that case.
     """
     decoder = None
-    pending = b""
+    pending = bytearray()
     completed = False
     with path.open("rb") as handle:
         while chunk := handle.read(16_384):
             while chunk:
                 if decoder is None:
                     decoder = zstandard.ZstdDecompressor().decompressobj()
-                decoded = decoder.decompress(chunk)
-                lines = (pending + decoded).split(b"\n")
-                pending = lines.pop()
-                for line in lines:
-                    yield line.decode("utf-8")
+                try:
+                    decoded = decoder.decompress(chunk)
+                except zstandard.ZstdError as exc:
+                    raise Invalid(f"Invalid Zstandard stream: {exc}") from exc
+                # Scan each newly decoded byte once, even for very long records.
+                lines = decoded.split(b"\n")
+                for line in lines[:-1]:
+                    pending.extend(line)
+                    yield bytes(pending)
+                    pending.clear()
+                pending.extend(lines[-1])
                 if decoder.eof:
                     chunk = decoder.unused_data
                     decoder = None
@@ -130,13 +167,13 @@ def compressed_lines(path, zstandard):
     if decoder is not None or not completed:
         raise Invalid("Incomplete or empty Zstandard stream")
     if pending:
-        yield pending.decode("utf-8")
+        yield bytes(pending)
 
 
 def inspect(root, books=False):
     root = Path(root).resolve()
     manifest_path = artifact(root, "index.json", ".json")
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"), parse_float=Decimal)
+    manifest = load_json(manifest_path.read_text(encoding="utf-8"))
     if not isinstance(manifest, dict) or not isinstance(manifest.get("modes"), list) or not manifest["modes"]:
         raise Invalid("index.json must contain a nonempty modes array")
     if books:
@@ -144,7 +181,7 @@ def inspect(root, books=False):
             import zstandard
         except ImportError as exc:
             raise Invalid("--books requires the optional zstandard package in this Python environment") from exc
-    reports, names = [], set()
+    reports, names, used_paths, warnings = [], set(), {}, []
     for mode in manifest["modes"]:
         if not isinstance(mode, dict) or not all(key in mode for key in ("name", "cost", "events", "weights")):
             raise Invalid("Mode must define name, cost, events, and weights")
@@ -159,6 +196,12 @@ def inspect(root, books=False):
             raise Invalid(f"Mode {name}: cost must be finite and positive")
         events = artifact(root, mode["events"], ".jsonl.zst")
         weights = artifact(root, mode["weights"], ".csv")
+        for path in (events, weights):
+            if path in used_paths:
+                warnings.append({"kind": "shared_artifact", "artifact": str(path.relative_to(root)),
+                                 "modes": [used_paths[path], name]})
+            else:
+                used_paths[path] = name
         with tempfile.TemporaryDirectory(prefix="studio-math-") as directory:
             db = sqlite3.connect(str(Path(directory) / "outcomes.sqlite"))
             try:
@@ -171,13 +214,26 @@ def inspect(root, books=False):
             ctx.prec = 40
             rtp = Decimal(stats["weighted_payout_sum"]) / Decimal(stats["weight_sum"]) / 100 / cost
             hit = Decimal(stats["winning_weight"]) / Decimal(stats["weight_sum"])
+            # Form the numerator with exact integers to avoid cancellation.
+            variance_numerator = (stats["weighted_payout_squared_sum"] * stats["weight_sum"]
+                                  - stats["weighted_payout_sum"] ** 2)
+            variance = Decimal(variance_numerator) / Decimal(stats["weight_sum"] ** 2) / 10_000
+            std_dev = variance.sqrt()
+            normalized_std_dev = std_dev / cost
+            max_recorded = Decimal(stats["max_recorded_payout"]) / 100
+            max_reachable = Decimal(stats["max_reachable_payout"]) / 100
         reports.append({"mode": name, "cost": str(cost), "outcomes": stats["outcomes"],
                         "weight_sum": str(stats["weight_sum"]), "zero_weight_outcomes": stats["zero_weight_outcomes"],
                         "rtp_fraction": str(rtp), "nonzero_hit_probability": str(hit),
+                        "payout_variance_base_bets_squared": str(variance),
+                        "payout_std_dev_base_bets": str(std_dev),
+                        "payout_std_dev_per_mode_cost": str(normalized_std_dev),
                         "max_recorded_payout_hundredths": stats["max_recorded_payout"],
                         "max_reachable_payout_hundredths": stats["max_reachable_payout"],
+                        "max_recorded_payout_base_bets": str(max_recorded),
+                        "max_reachable_payout_base_bets": str(max_reachable),
                         "events_bytes": events.stat().st_size, "books_verified": books})
-    return {"ok": True, "scope": "structural and payout integrity; not Studio approval", "modes": reports}
+    return {"ok": True, "scope": "structural and payout integrity; not Studio approval", "warnings": warnings, "modes": reports}
 
 
 def main(argv=None):
@@ -187,10 +243,12 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         report = inspect(args.directory, args.books)
-    except Exception as exc:
-        # JSON output remains machine-readable for filesystem, database, and decoder errors.
-        print(json.dumps({"ok": False, "books_requested": args.books, "error": str(exc)}, indent=2))
+    except (Invalid, OSError, ValueError, sqlite3.Error, csv.Error) as exc:
+        print(json.dumps({"ok": False, "kind": "invalid", "books_requested": args.books, "error": str(exc)}, indent=2))
         return 1
+    except Exception as exc:
+        print(json.dumps({"ok": False, "kind": "internal_error", "error": str(exc)}, indent=2))
+        return 3
     print(json.dumps(report, indent=2))
     return 0
 

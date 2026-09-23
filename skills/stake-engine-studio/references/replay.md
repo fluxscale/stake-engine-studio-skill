@@ -24,6 +24,6 @@ A useful fixture matrix covers loss, ordinary win, large win, cap, and feature e
 
 ## Active-round recovery
 
-Authenticate and inspect `round.active`, its state, and progress marker. Decide whether to render from the beginning or resume according to the installed SDK's contract. Keep a recovered wager bound to its original mode/amount. Do not charge again or run browser RNG to reconstruct the result. Use the returned server balance and end-round response as monetary authority. Sources: [RGS flows](https://studio.engine.io/docs/rgs), [wallet event endpoint](https://studio.engine.io/docs/rgs/wallet).
+Authenticate and inspect `round.active`, its state, and progress marker. Decide whether to render from the beginning or resume according to the installed SDK's contract. Keep a recovered wager bound to its original mode/amount. Do not charge again or run browser RNG to reconstruct the result. Use the returned server balance and end-round response as monetary authority. Sources: [RGS flows](https://studio.engine.io/docs/rgs), [wallet event endpoint](https://studio.engine.io/docs/rgs/wallet), [client round types](https://github.com/engineio/ts-client/blob/main/src/types.ts).
 
 Test disconnects before play response, during a cascade, in a feature, and around settlement. A client that animates correctly but can place another bet while settlement is uncertain is not ready. For issue reports, attach a synthetic or sanitized replay fixture, never a live session URL.

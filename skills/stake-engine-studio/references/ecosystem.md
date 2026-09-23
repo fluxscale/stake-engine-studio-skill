@@ -28,7 +28,7 @@ For a requested implementation, test repeated and concurrent transactions, insuf
 
 ## Engine product UI
 
-[engineio/ui](https://github.com/engineio/ui) supplies `@engineio/ui` Svelte primitives and brand tokens. Its Tailwind 4 consumer setup requires scanning the package's `dist` directory via `@source`, relative to the stylesheet. Missing this can produce partially styled components without a compile error. Product-specific variants belong in the consumer; inspect `MIGRATION.md` for upgrades.
+[engineio/ui](https://github.com/engineio/ui) supplies `@engineio/ui` Svelte primitives and brand tokens. Its Tailwind 4 consumer setup requires scanning the package's `dist` directory via `@source`, relative to the stylesheet. Missing this can produce partially styled components without a compile error. Product-specific variants belong in the consumer; inspect `MIGRATION.md` for its consumer adoption plan, and release notes/source diffs for version upgrades.
 
 This library's product-brand/font examples are not permission to put Stake/Engine branding or externally hosted fonts into a submitted game. Apply the game's approval rules and own art direction. Do not migrate a Pixi game UI to DOM primitives merely because this repository exists. Source: [UI README](https://github.com/engineio/ui/blob/main/README.md).
 

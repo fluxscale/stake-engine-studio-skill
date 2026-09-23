@@ -8,7 +8,7 @@ Review originality, asset ownership, stateless mechanics, and the intended audie
 
 ## Math requirements
 
-The baseline critical checks include: a cheapest base mode costing 1×; base standard deviation ≥0.6; per-mode RTP 90–96.7%; cross-mode variation guidance of 0.5 percentage points; maximum payout ≤500,000×; cost ≤2,000×; nonzero win probability ≥1/50; and a viable bet template. Check the current page's exact definitions and the cross-mode ambiguity described in [optimization](optimization.md).
+The baseline critical checks include: a cheapest base mode costing 1×; base standard deviation ≥0.6; per-mode RTP 90–96.7%; a critical cross-mode RTP variation limit of 0.5 percentage points; maximum payout ≤500,000×; cost ≤2,000×; nonzero win probability ≥1/50; and a viable bet template. Check the current page's exact definitions and the cross-mode ambiguity described in [optimization](optimization.md).
 
 The page also limits each `.jsonl.zst` file to 4.2 GB and each mode to 10,000,000 events. Do not infer whether GB means decimal or binary at a boundary; leave headroom and verify in Studio.
 
@@ -20,7 +20,7 @@ Verify accessible rules, mode costs, per-mode RTP/cap, symbol payouts, special v
 
 Test authenticated bet configuration, currency/language combinations, and the provided `rgs_url`. Submitted game builds must be static and load their assets through Engine hosting; external fonts/CDNs can violate the restriction. Source: [RGS communication](https://studio.engine.io/docs/approval-guidelines/rgs-communication).
 
-Provide a rules disclaimer covering disconnection recovery, long-run expected return, illustrative visuals, and server-determined settlement. Retrieve and review current official wording if using the platform's template instead of copying this summary verbatim. Source: [general disclaimer](https://studio.engine.io/docs/approval-guidelines/general-disclaimer).
+Provide a rules disclaimer stating that malfunction voids wins and plays, and covering disconnection recovery, long-run expected return, illustrative visuals, and server-determined settlement. Retrieve and review current official wording if using the platform's template instead of copying this summary verbatim. Source: [general disclaimer](https://studio.engine.io/docs/approval-guidelines/general-disclaimer).
 
 ## Replay and localization
 

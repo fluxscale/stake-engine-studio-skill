@@ -17,13 +17,14 @@ def make_search(query, repos, kind, state=None, limit=20):
     if state:
         qualifiers.append(f"is:{state}")
     url = "https://github.com/search?" + urlencode({"q": " ".join([query, *qualifiers]), "type": "issues"})
-    command = ["gh", "search", kind, query, "--limit", str(limit), "--json", "number,title,state,url,updatedAt"]
+    command = ["gh", "search", kind, "--limit", str(limit), "--json", "number,title,state,url,updatedAt"]
     for repo in repos:
         command += ["--repo", f"engineio/{repo}"]
     if not repos:
         command += ["--owner", "engineio"]
     if state:
         command += ["--state", state]
+    command += ["--", query]
     return {"kind": kind, "url": url, "command": command, "preview": shlex.join(command)}
 
 
@@ -36,8 +37,8 @@ def main(argv=None):
     parser.add_argument("--limit", type=int, default=20)
     parser.add_argument("--run", action="store_true", help="Execute read-only gh searches")
     args = parser.parse_args(argv)
-    if not args.query.strip() or args.query.startswith("-"):
-        parser.error("Provide a nonempty query that does not start with '-'.")
+    if not args.query.strip():
+        parser.error("Provide a nonempty query.")
     if not 1 <= args.limit <= 100:
         parser.error("--limit must be between 1 and 100")
     kinds = ("issues", "prs") if args.kind == "both" else (args.kind,)
@@ -49,6 +50,8 @@ def main(argv=None):
             try:
                 result = subprocess.run(item["command"], capture_output=True, text=True, timeout=45, check=True)
                 item["results"] = json.loads(result.stdout)
+                if not isinstance(item["results"], list):
+                    raise ValueError("GitHub search returned a non-array JSON response")
                 item["possibly_truncated"] = len(item["results"]) >= args.limit
             except (OSError, subprocess.SubprocessError, ValueError) as exc:
                 item["error"] = (exc.stderr or str(exc)).strip() if isinstance(exc, subprocess.CalledProcessError) else str(exc)

@@ -1,0 +1,47 @@
+{
+  "verified_at": "2026-09-23",
+  "repositories": [
+    {
+      "name": "math-sdk",
+      "url": "https://github.com/engineio/math-sdk",
+      "commit": "a6dccd86de740cc5d318079483cb6204cc5c19bc",
+      "commit_date": "2026-09-22T01:38:30Z"
+    },
+    {
+      "name": "web-sdk",
+      "url": "https://github.com/engineio/web-sdk",
+      "commit": "1843d60cedb94b390e641b563f32ad64353bec5e",
+      "commit_date": "2025-11-27T23:55:12Z"
+    },
+    {
+      "name": "ts-client",
+      "url": "https://github.com/engineio/ts-client",
+      "commit": "df9e126d79b3fe1ef353f4fac9c1699cd79a4d3e",
+      "commit_date": "2025-10-26T01:24:17Z"
+    },
+    {
+      "name": "docs",
+      "url": "https://github.com/engineio/docs",
+      "commit": "fefadc7bd117f8e06f0a01e750408da2244f8d8f",
+      "commit_date": "2026-03-17T13:45:28Z"
+    },
+    {
+      "name": "convex-optimizer",
+      "url": "https://github.com/engineio/convex-optimizer",
+      "commit": "5cd0beaa9d32dfee5dacb6b65632a83361bf9349",
+      "commit_date": "2026-02-07T01:41:40Z"
+    },
+    {
+      "name": "integration",
+      "url": "https://github.com/engineio/integration",
+      "commit": "574c195a046826ba15ace0b36a6f1740871742b9",
+      "commit_date": "2026-09-16T14:01:27Z"
+    },
+    {
+      "name": "ui",
+      "url": "https://github.com/engineio/ui",
+      "commit": "45c4fc5ab2e5651bd553dba1e30c903e0f4fcf98",
+      "commit_date": "2026-09-15T04:25:11Z"
+    }
+  ]
+}

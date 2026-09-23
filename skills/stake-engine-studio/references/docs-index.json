@@ -1,0 +1,1142 @@
+{
+  "verified_at": "2026-09-23",
+  "note": "Studio routes and engineio/docs source routes are separate collections; do not interchange URL paths. Source paths are tree-verified, not a guarantee that each page matches the deployed Studio.",
+  "pages": [
+    {
+      "collection": "studio",
+      "route": "/docs",
+      "title": "API Documentation",
+      "url": "https://studio.engine.io/docs"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines",
+      "title": "General Requirements",
+      "url": "https://studio.engine.io/docs/approval-guidelines"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/front-end-communication",
+      "title": "Frontend and Communication",
+      "url": "https://studio.engine.io/docs/approval-guidelines/front-end-communication"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/game-quality-rankings",
+      "title": "Game Quality Rankings",
+      "url": "https://studio.engine.io/docs/approval-guidelines/game-quality-rankings"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/game-replay-requirements",
+      "title": "Bet Replay",
+      "url": "https://studio.engine.io/docs/approval-guidelines/game-replay-requirements"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/game-tile-requirements",
+      "title": "Game Tile Visual Asset Requirements",
+      "url": "https://studio.engine.io/docs/approval-guidelines/game-tile-requirements"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/general-disclaimer",
+      "title": "General Game Disclaimer",
+      "url": "https://studio.engine.io/docs/approval-guidelines/general-disclaimer"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/jurisdiction-requirements",
+      "title": "Jurisdiction Requirements",
+      "url": "https://studio.engine.io/docs/approval-guidelines/jurisdiction-requirements"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/math-verification",
+      "title": "Math Verification",
+      "url": "https://studio.engine.io/docs/approval-guidelines/math-verification"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/rgs-communication",
+      "title": "Remote Game Server (RGS) Communication",
+      "url": "https://studio.engine.io/docs/approval-guidelines/rgs-communication"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/approval-guidelines/submission-checklist",
+      "title": "Submission Checklist (team criteria require login)",
+      "url": "https://studio.engine.io/docs/approval-guidelines/submission-checklist"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end",
+      "title": "Engine Software Development Kit",
+      "url": "https://studio.engine.io/docs/front-end"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/adding-new-events",
+      "title": "Steps to Add a New BookEvent",
+      "url": "https://studio.engine.io/docs/front-end/adding-new-events"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/context",
+      "title": "Context",
+      "url": "https://studio.engine.io/docs/front-end/context"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/dependencies",
+      "title": "Dependencies",
+      "url": "https://studio.engine.io/docs/front-end/dependencies"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/file-structure",
+      "title": "File Structure",
+      "url": "https://studio.engine.io/docs/front-end/file-structure"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/flowchart",
+      "title": "Flow Chart",
+      "url": "https://studio.engine.io/docs/front-end/flowchart"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/getting-started",
+      "title": "Get started",
+      "url": "https://studio.engine.io/docs/front-end/getting-started"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/storybook",
+      "title": "Explore Storybook",
+      "url": "https://studio.engine.io/docs/front-end/storybook"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/task-breakdown",
+      "title": "Task Breakdown",
+      "url": "https://studio.engine.io/docs/front-end/task-breakdown"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/front-end/ui",
+      "title": "UI",
+      "url": "https://studio.engine.io/docs/front-end/ui"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math",
+      "title": "Why Use the Math SDK?",
+      "url": "https://studio.engine.io/docs/math"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/example-games",
+      "title": "Sample Games",
+      "url": "https://studio.engine.io/docs/math/example-games"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure",
+      "title": "Game State Structure",
+      "url": "https://studio.engine.io/docs/math/game-state-structure"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/board",
+      "title": "Active Game Board",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/board"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/events",
+      "title": "Game Event Structures",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/events"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/force-files",
+      "title": "Custom Defined Events",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/force-files"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/setup",
+      "title": "Setup",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/setup"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/setup/betmode",
+      "title": "BetMode configuration",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/setup/betmode"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/setup/configs",
+      "title": "Game Configuration Files",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/setup/configs"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/setup/distribution",
+      "title": "Distribution Conditions",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/setup/distribution"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/simulation-acceptance",
+      "title": "Simulation Acceptance Criteria",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/simulation-acceptance"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/symbols",
+      "title": "Symbol structure",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/symbols"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/game-state-structure/wins",
+      "title": "Win calculations",
+      "url": "https://studio.engine.io/docs/math/game-state-structure/wins"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/high-level-structure",
+      "title": "High Level Structure",
+      "url": "https://studio.engine.io/docs/math/high-level-structure"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/high-level-structure/game-format",
+      "title": "Standard Game Setup Requirements",
+      "url": "https://studio.engine.io/docs/math/high-level-structure/game-format"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/high-level-structure/game-structure",
+      "title": "Intended Engine Usage",
+      "url": "https://studio.engine.io/docs/math/high-level-structure/game-structure"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/high-level-structure/state-machine",
+      "title": "The State Machine",
+      "url": "https://studio.engine.io/docs/math/high-level-structure/state-machine"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/math-file-format",
+      "title": "Math verification",
+      "url": "https://studio.engine.io/docs/math/math-file-format"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/optimization-algorithm",
+      "title": "Optimizing win distributions with iterative weighted sampling",
+      "url": "https://studio.engine.io/docs/math/optimization-algorithm"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/quick-start",
+      "title": "Running your first game",
+      "url": "https://studio.engine.io/docs/math/quick-start"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/sdk-directory",
+      "title": "Repository Directory Overview",
+      "url": "https://studio.engine.io/docs/math/sdk-directory"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/setup",
+      "title": "Setup and installation",
+      "url": "https://studio.engine.io/docs/math/setup"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files",
+      "title": "Source Files",
+      "url": "https://studio.engine.io/docs/math/source-files"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/calculations",
+      "title": "Calculations",
+      "url": "https://studio.engine.io/docs/math/source-files/calculations"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/calculations/board",
+      "title": "Game Board",
+      "url": "https://studio.engine.io/docs/math/source-files/calculations/board"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/calculations/cluster",
+      "title": "Cluster Pays",
+      "url": "https://studio.engine.io/docs/math/source-files/calculations/cluster"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/calculations/lines",
+      "title": "Line wins evaluation",
+      "url": "https://studio.engine.io/docs/math/source-files/calculations/lines"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/calculations/scatter",
+      "title": "Scatter Pays",
+      "url": "https://studio.engine.io/docs/math/source-files/calculations/scatter"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/calculations/tumble",
+      "title": "Tumbling boards",
+      "url": "https://studio.engine.io/docs/math/source-files/calculations/tumble"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/calculations/ways",
+      "title": "Ways wins evaluation",
+      "url": "https://studio.engine.io/docs/math/source-files/calculations/ways"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/config",
+      "title": "Config class object",
+      "url": "https://studio.engine.io/docs/math/source-files/config"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/events",
+      "title": "Events Module Documentation",
+      "url": "https://studio.engine.io/docs/math/source-files/events"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/executables",
+      "title": "Executables Class Documentation",
+      "url": "https://studio.engine.io/docs/math/source-files/executables"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/outputs",
+      "title": "Output files",
+      "url": "https://studio.engine.io/docs/math/source-files/outputs"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/state",
+      "title": "GeneralGameState Class Overview",
+      "url": "https://studio.engine.io/docs/math/source-files/state"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/source-files/win-manager",
+      "title": "Wallet Manger",
+      "url": "https://studio.engine.io/docs/math/source-files/win-manager"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/math/utilities",
+      "title": "Various useful functions",
+      "url": "https://studio.engine.io/docs/math/utilities"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/payments",
+      "title": "Payments",
+      "url": "https://studio.engine.io/docs/payments"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/privacy",
+      "title": "Privacy Policy",
+      "url": "https://studio.engine.io/docs/privacy"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/rgs",
+      "title": "RGS Details",
+      "url": "https://studio.engine.io/docs/rgs"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/rgs/example",
+      "title": "Getting Started with RGS Responses",
+      "url": "https://studio.engine.io/docs/rgs/example"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/rgs/wallet",
+      "title": "Wallet",
+      "url": "https://studio.engine.io/docs/rgs/wallet"
+    },
+    {
+      "collection": "studio",
+      "route": "/docs/terms",
+      "title": "Game Licence Terms and Conditions",
+      "url": "https://studio.engine.io/docs/terms"
+    },
+    {
+      "collection": "source",
+      "route": "/changelog/payout-december-2025",
+      "title": "December 2025 Publisher Payments",
+      "description": "Happy New Year! Another record month - over $4.2M USD paid in publisher profit across 116 teams with 458 active games.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/changelog/payout-december-2025/+page.svx",
+      "path": "src/routes/changelog/payout-december-2025/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/changelog/payout-february-2026",
+      "title": "February 2026 Publisher Payments",
+      "description": "Pay day! Publisher payouts exceeded $6M USD - 211 active providers, 738 live games, 560M+ bets accepted, and the largest single payout to a non-affiliate was $7.5M USD.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/changelog/payout-february-2026/+page.svx",
+      "path": "src/routes/changelog/payout-february-2026/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/changelog/payout-january-2026",
+      "title": "January 2026 Publisher Payments",
+      "description": "Payments processed for January - ~$5M USD paid out among 170+ active publishers totaling 580+ games. Over 650 million bets placed on the RGS.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/changelog/payout-january-2026/+page.svx",
+      "path": "src/routes/changelog/payout-january-2026/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/changelog/payout-november-2025",
+      "title": "November 2025 Publisher Payments",
+      "description": "Kicking off December with an early Christmas present - $2.8M USD paid out to publishers across 116 teams with 357 live games on Stake.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/changelog/payout-november-2025/+page.svx",
+      "path": "src/routes/changelog/payout-november-2025/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/changelog/rating-system-minimum-threshold",
+      "title": "Rating System Update - Minimum Quality Threshold",
+      "description": "Games with an average rating below 1 star will no longer be approved. A 7-day resubmission window is available after rejection.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/changelog/rating-system-minimum-threshold/+page.svx",
+      "path": "src/routes/changelog/rating-system-minimum-threshold/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/changelog/replay-mode",
+      "title": "Replay Mode",
+      "description": "Bet Replay is now a mandatory requirement for all games. Rounds can be shared and viewed via replay URLs.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/changelog/replay-mode/+page.svx",
+      "path": "src/routes/changelog/replay-mode/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs",
+      "title": "docs",
+      "description": "",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/+page.svx",
+      "path": "src/routes/docs/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/ai-integration",
+      "title": "AI Integration",
+      "description": "Connect AI assistants and agents to Stake Engine documentation using the MCP server and Hayden agent.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/ai-integration/+page.svx",
+      "path": "src/routes/docs/ai-integration/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/ai-integration/hayden-agent",
+      "title": "Hayden Agent",
+      "description": "Set up the Hayden AI agent - a pre-configured assistant that searches and cites Stake Engine documentation.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/ai-integration/hayden-agent/+page.svx",
+      "path": "src/routes/docs/ai-integration/hayden-agent/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/ai-integration/mcp-server",
+      "title": "MCP Server",
+      "description": "Install, build, and run the Stake Engine documentation MCP server for AI-powered doc search.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/ai-integration/mcp-server/+page.svx",
+      "path": "src/routes/docs/ai-integration/mcp-server/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/api",
+      "title": "API Methods",
+      "description": "Complete reference for all Stake Engine RGS API endpoints - wallet operations, game events, and bet replay.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/api/+page.svx",
+      "path": "src/routes/docs/api/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/api/authenticate",
+      "title": "Authenticate",
+      "description": "Authenticate a wallet session and retrieve balance, game configuration, and jurisdiction settings.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/api/authenticate/+page.svx",
+      "path": "src/routes/docs/api/authenticate/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/api/balance",
+      "title": "Balance",
+      "description": "Retrieve the player's current wallet balance.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/api/balance/+page.svx",
+      "path": "src/routes/docs/api/balance/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/api/bet-replay",
+      "title": "Bet Replay",
+      "description": "Implement and test bet replay - fetch round data from the RGS, build the replay UX, and validate scenarios.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/api/bet-replay/+page.svx",
+      "path": "src/routes/docs/api/bet-replay/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/api/end-round",
+      "title": "End Round",
+      "description": "Complete a game round and trigger the final payout.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/api/end-round/+page.svx",
+      "path": "src/routes/docs/api/end-round/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/api/event",
+      "title": "Event",
+      "description": "Track in-progress player actions during a round for state recovery.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/api/event/+page.svx",
+      "path": "src/routes/docs/api/event/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/api/play",
+      "title": "Play",
+      "description": "Initiate a game round and debit the bet amount from the player's balance.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/api/play/+page.svx",
+      "path": "src/routes/docs/api/play/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval",
+      "title": "Approval",
+      "description": "Game approval process, requirements, and checklist for launching on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/+page.svx",
+      "path": "src/routes/docs/approval/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval/checklist",
+      "title": "Checklist",
+      "description": "Interactive game approval checklist - all requirements for launching on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/checklist/+page.svx",
+      "path": "src/routes/docs/approval/checklist/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval/disclaimer",
+      "title": "Game Disclaimer",
+      "description": "Required legal disclaimer text for game rules and information popups on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/disclaimer/+page.svx",
+      "path": "src/routes/docs/approval/disclaimer/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval/frontend-requirements",
+      "title": "Frontend Requirements",
+      "description": "Frontend approval - UI components, rules display, paytable, and mobile support",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/frontend-requirements/+page.svx",
+      "path": "src/routes/docs/approval/frontend-requirements/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval/game-tile",
+      "title": "Game Tile",
+      "description": "How to create your game tile using the built-in Tile Editor on the Stake Engine dashboard",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/game-tile/+page.svx",
+      "path": "src/routes/docs/approval/game-tile/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval/math-requirements",
+      "title": "Math Requirements",
+      "description": "Math verification - RTP range, max win, hit-rate, volatility, and simulation criteria",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/math-requirements/+page.svx",
+      "path": "src/routes/docs/approval/math-requirements/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval/quality",
+      "title": "Quality Rankings",
+      "description": "Fractional rating process, quality ranking tiers, promotion visibility, and category placement guidelines.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/quality/+page.svx",
+      "path": "src/routes/docs/approval/quality/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/approval/rgs-requirements",
+      "title": "RGS Requirements",
+      "description": "RGS approval - XSS policy, bet levels, localization, and currency support",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/approval/rgs-requirements/+page.svx",
+      "path": "src/routes/docs/approval/rgs-requirements/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/architecture",
+      "title": "Architecture",
+      "description": "How Stake Engine works under the hood - outcome selection, stateless design, and data formats.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/architecture/+page.svx",
+      "path": "src/routes/docs/architecture/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/architecture/frontend-stack",
+      "title": "Frontend Stack",
+      "description": "Common frontend technology choices for building games on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/architecture/frontend-stack/+page.svx",
+      "path": "src/routes/docs/architecture/frontend-stack/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/architecture/how-rgs-works",
+      "title": "How the RGS Works",
+      "description": "How game outcomes are selected using pre-generated Lookup Tables and simulation books.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/architecture/how-rgs-works/+page.svx",
+      "path": "src/routes/docs/architecture/how-rgs-works/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/example",
+      "title": "Example Page",
+      "description": "A demo page showcasing frontmatter-driven navigation, badges, and metadata.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/example/+page.svx",
+      "path": "src/routes/docs/example/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/example/api",
+      "title": "Authenticate",
+      "description": "Authenticate a wallet session and retrieve game configuration.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/example/api/+page.svx",
+      "path": "src/routes/docs/example/api/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/example/hello",
+      "title": "Hello",
+      "description": "",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/example/hello/+page.svx",
+      "path": "src/routes/docs/example/hello/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk",
+      "title": "Math SDK",
+      "description": "Python framework for building game math - simulations, payout tables, and compressed game logic files",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/+page.svx",
+      "path": "src/routes/docs/math-sdk/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/architecture",
+      "title": "Architecture",
+      "description": "High-level game structure, format patterns, and the state machine",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/architecture/+page.svx",
+      "path": "src/routes/docs/math-sdk/architecture/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/architecture/game-format",
+      "title": "Game Format",
+      "description": "Standard game setup - configuration file, gamestate file, and runfile pattern",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/architecture/game-format/+page.svx",
+      "path": "src/routes/docs/math-sdk/architecture/game-format/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/architecture/game-structure",
+      "title": "Game Structure",
+      "description": "Game file structure, run-file parameters, and library folder organization",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/architecture/game-structure/+page.svx",
+      "path": "src/routes/docs/math-sdk/architecture/game-structure/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/architecture/state-machine",
+      "title": "State Machine",
+      "description": "GameState as the central hub - class inheritance, books, and lookup tables",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/architecture/state-machine/+page.svx",
+      "path": "src/routes/docs/math-sdk/architecture/state-machine/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/calculations",
+      "title": "Calculations",
+      "description": "Win evaluation algorithms - lines, ways, cluster, scatter, tumble, and board generation",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/calculations/+page.svx",
+      "path": "src/routes/docs/math-sdk/calculations/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/calculations/board",
+      "title": "Board",
+      "description": "Board generation - reelstrip selection, wrapping, padding, and forced positions",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/calculations/board/+page.svx",
+      "path": "src/routes/docs/math-sdk/calculations/board/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/calculations/cluster",
+      "title": "Cluster",
+      "description": "Cluster pays - BFS algorithm for 5+ neighboring like-symbols",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/calculations/cluster/+page.svx",
+      "path": "src/routes/docs/math-sdk/calculations/cluster/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/calculations/lines",
+      "title": "Lines",
+      "description": "Line wins evaluation - paylines, wild handling, and multiplier combinations",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/calculations/lines/+page.svx",
+      "path": "src/routes/docs/math-sdk/calculations/lines/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/calculations/scatter",
+      "title": "Scatter",
+      "description": "Scatter pays - total like-symbol matching with multipliers and wilds",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/calculations/scatter/+page.svx",
+      "path": "src/routes/docs/math-sdk/calculations/scatter/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/calculations/tumble",
+      "title": "Tumble",
+      "description": "Tumbling boards - removing winning symbols and filling from above",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/calculations/tumble/+page.svx",
+      "path": "src/routes/docs/math-sdk/calculations/tumble/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/calculations/ways",
+      "title": "Ways",
+      "description": "Ways wins evaluation - consecutive reel matching with multiplicative multipliers",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/calculations/ways/+page.svx",
+      "path": "src/routes/docs/math-sdk/calculations/ways/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/example-games",
+      "title": "Example Games",
+      "description": "Five sample games demonstrating lines, ways, cluster, scatter, and expanding wilds mechanics",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/example-games/+page.svx",
+      "path": "src/routes/docs/math-sdk/example-games/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/gamestate",
+      "title": "Game State",
+      "description": "Symbols, board, events, wins, simulation criteria, and force files",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/gamestate/+page.svx",
+      "path": "src/routes/docs/math-sdk/gamestate/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/gamestate/board",
+      "title": "Active Board",
+      "description": "Active game board - display, special symbols, tumbling, and padding",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/gamestate/board/+page.svx",
+      "path": "src/routes/docs/math-sdk/gamestate/board/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/gamestate/events",
+      "title": "Game Events",
+      "description": "Event JSON structure - format, indexing, and appending to books",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/gamestate/events/+page.svx",
+      "path": "src/routes/docs/math-sdk/gamestate/events/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/gamestate/force-files",
+      "title": "Force Files",
+      "description": "Custom defined events for testing - recording, search keys, and output format",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/gamestate/force-files/+page.svx",
+      "path": "src/routes/docs/math-sdk/gamestate/force-files/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/gamestate/simulation",
+      "title": "Simulation",
+      "description": "Simulation acceptance criteria - quotas, win criteria, and repeat checking",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/gamestate/simulation/+page.svx",
+      "path": "src/routes/docs/math-sdk/gamestate/simulation/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/gamestate/symbols",
+      "title": "Symbols",
+      "description": "Symbol class - attributes, paytable values, special properties, and methods",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/gamestate/symbols/+page.svx",
+      "path": "src/routes/docs/math-sdk/gamestate/symbols/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/gamestate/wins",
+      "title": "Wins",
+      "description": "Win data structure - calculation methods, multiplier strategies, and wallet manager",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/gamestate/wins/+page.svx",
+      "path": "src/routes/docs/math-sdk/gamestate/wins/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/getting-started",
+      "title": "Quick Start",
+      "description": "Get started with the Stake Engine SDK - prerequisites, setup for Math and Web SDK",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/getting-started/+page.svx",
+      "path": "src/routes/docs/math-sdk/getting-started/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/quick-start",
+      "title": "Quick Start",
+      "description": "Run your first game simulation and inspect the output files",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/quick-start/+page.svx",
+      "path": "src/routes/docs/math-sdk/quick-start/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/rgs-example",
+      "title": "RGS Example",
+      "description": "Build and deploy a simple fifty-fifty game with RGS integration",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/rgs-example/+page.svx",
+      "path": "src/routes/docs/math-sdk/rgs-example/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/setup",
+      "title": "Setup",
+      "description": "Installation, configuration files, bet modes, and distribution conditions",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/setup/+page.svx",
+      "path": "src/routes/docs/math-sdk/setup/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/setup/betmode",
+      "title": "Bet Mode",
+      "description": "BetMode configuration - max win, RTP, cost multiplier, and distribution conditions",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/setup/betmode/+page.svx",
+      "path": "src/routes/docs/math-sdk/setup/betmode/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/setup/configs",
+      "title": "Game Config",
+      "description": "GameConfig parameters - game types, reels, paytable, symbols, and scatter triggers",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/setup/configs/+page.svx",
+      "path": "src/routes/docs/math-sdk/setup/configs/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/setup/distribution",
+      "title": "Distribution",
+      "description": "Distribution classes - win criteria, quotas, reel weights, and force conditions",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/setup/distribution/+page.svx",
+      "path": "src/routes/docs/math-sdk/setup/distribution/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/source",
+      "title": "Source",
+      "description": "Core SDK modules - output files, state management, executables, events, and win tracking",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/source/+page.svx",
+      "path": "src/routes/docs/math-sdk/source/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/source/events",
+      "title": "Events",
+      "description": "Event functions - reveal, free spin triggers, win updates, and final payouts",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/source/events/+page.svx",
+      "path": "src/routes/docs/math-sdk/source/events/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/source/executables",
+      "title": "Executables",
+      "description": "Reusable game actions - board drawing, tumbling, free spins, and win evaluation",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/source/executables/+page.svx",
+      "path": "src/routes/docs/math-sdk/source/executables/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/source/outputs",
+      "title": "Outputs",
+      "description": "Output files - books, force files, lookup tables, and config files",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/source/outputs/+page.svx",
+      "path": "src/routes/docs/math-sdk/source/outputs/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/source/state",
+      "title": "State",
+      "description": "GeneralGameState class - abstract base for game state management",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/source/state/+page.svx",
+      "path": "src/routes/docs/math-sdk/source/state/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/math-sdk/source/win-manager",
+      "title": "Win Manager",
+      "description": "WinManager class - tracking cumulative wins across base game and free spins",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/math-sdk/source/win-manager/+page.svx",
+      "path": "src/routes/docs/math-sdk/source/win-manager/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/reference",
+      "title": "Reference",
+      "description": "Reference tables for supported currencies, languages, viewport dimensions, and social mode restrictions.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/reference/+page.svx",
+      "path": "src/routes/docs/reference/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/reference/currencies",
+      "title": "Currencies",
+      "description": "All supported currency codes, symbols, display formats, and formatting helpers on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/reference/currencies/+page.svx",
+      "path": "src/routes/docs/reference/currencies/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/reference/dimensions",
+      "title": "Dimensions",
+      "description": "Standard viewport dimensions for desktop, mobile, and popout game modes.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/reference/dimensions/+page.svx",
+      "path": "src/routes/docs/reference/dimensions/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/reference/languages",
+      "title": "Languages",
+      "description": "Supported language codes for game localization on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/reference/languages/+page.svx",
+      "path": "src/routes/docs/reference/languages/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/reference/social-mode",
+      "title": "Social Mode",
+      "description": "Social casino compliance - restricted phrases and required replacements for stake.us.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/reference/social-mode/+page.svx",
+      "path": "src/routes/docs/reference/social-mode/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/reference/url-structure",
+      "title": "URL Structure",
+      "description": "Game launch URL format, path segments, and query parameters for Stake Engine games.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/reference/url-structure/+page.svx",
+      "path": "src/routes/docs/reference/url-structure/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk",
+      "title": "Web SDK",
+      "description": "PixieJS and Svelte framework for building slot game frontends",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/+page.svx",
+      "path": "src/routes/docs/web-sdk/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/adding-events",
+      "title": "Adding Events",
+      "description": "Step-by-step guide to adding a new bookEvent with types, handlers, and components",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/adding-events/+page.svx",
+      "path": "src/routes/docs/web-sdk/adding-events/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/context",
+      "title": "Context",
+      "description": "Four major Svelte contexts - EventEmitter, Layout, Xstate, and App",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/context/+page.svx",
+      "path": "src/routes/docs/web-sdk/context/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/file-structure",
+      "title": "File Structure",
+      "description": "Monorepo layout - apps, packages, and naming conventions",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/file-structure/+page.svx",
+      "path": "src/routes/docs/web-sdk/file-structure/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/flowchart",
+      "title": "Flowchart",
+      "description": "Game processing flow - books, bookEvents, emitterEvents, and component handlers",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/flowchart/+page.svx",
+      "path": "src/routes/docs/web-sdk/flowchart/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/getting-started",
+      "title": "Getting Started",
+      "description": "Setup Node, pnpm, clone the repository, and run Storybook",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/getting-started/+page.svx",
+      "path": "src/routes/docs/web-sdk/getting-started/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/storybook",
+      "title": "Storybook",
+      "description": "Testing games at multiple levels - whole game, components, and individual bookEvents",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/storybook/+page.svx",
+      "path": "src/routes/docs/web-sdk/storybook/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/task-breakdown",
+      "title": "Task Breakdown",
+      "description": "Splitting complex emitterEvents into smaller atomic tasks for testing",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/task-breakdown/+page.svx",
+      "path": "src/routes/docs/web-sdk/task-breakdown/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/docs/web-sdk/ui",
+      "title": "UI Components",
+      "description": "Base UI solutions - auto gaming, turbo mode, bonus buttons, and responsiveness",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/docs/web-sdk/ui/+page.svx",
+      "path": "src/routes/docs/web-sdk/ui/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq",
+      "title": "Frequently Asked Questions",
+      "description": "Answers to common questions about Stake Engine development and integration.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/+page.svx",
+      "path": "src/routes/faq/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/getting-started",
+      "title": "Getting Started",
+      "description": "Common questions about setting up and building your first Stake Engine game.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/getting-started/+page.svx",
+      "path": "src/routes/faq/getting-started/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/getting-started/how-do-i-start",
+      "title": "How do I start building a game?",
+      "description": "A step-by-step overview of how to begin developing a game on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/getting-started/how-do-i-start/+page.svx",
+      "path": "src/routes/faq/getting-started/how-do-i-start/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/math",
+      "title": "Math",
+      "description": "Questions about math file formats, simulations, and game logic for Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/math/+page.svx",
+      "path": "src/routes/faq/math/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/math/rtp-variation-side-bets",
+      "title": "Does the 0.5% RTP variation rule apply to all game modes?",
+      "description": "The 0.5% RTP variation requirement applies to every game mode - side bets, bonuses, features, and any other mechanic.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/math/rtp-variation-side-bets/+page.svx",
+      "path": "src/routes/faq/math/rtp-variation-side-bets/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/math/what-files-are-required",
+      "title": "What format and files are required for math?",
+      "description": "The minimum file requirements and formats for publishing math files to the Stake Engine RGS.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/math/what-files-are-required/+page.svx",
+      "path": "src/routes/faq/math/what-files-are-required/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/publishing",
+      "title": "Publishing",
+      "description": "Questions about game publishing, approval requirements, and submission guidelines.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/publishing/+page.svx",
+      "path": "src/routes/faq/publishing/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/publishing/exclusivity-requirements",
+      "title": "What are the exclusivity requirements?",
+      "description": "Originality, content, and post-release requirements for games published on Stake Engine.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/publishing/exclusivity-requirements/+page.svx",
+      "path": "src/routes/faq/publishing/exclusivity-requirements/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/publishing/game-ranking",
+      "title": "How does game ranking work after release?",
+      "description": "How newly released games are positioned in the lobby and when rankings are updated.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/publishing/game-ranking/+page.svx",
+      "path": "src/routes/faq/publishing/game-ranking/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/publishing/game-removal",
+      "title": "Why was my game removed from Stake?",
+      "description": "Why games may be temporarily removed from Stake and what to do if your game disappears.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/publishing/game-removal/+page.svx",
+      "path": "src/routes/faq/publishing/game-removal/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/rgs",
+      "title": "RGS",
+      "description": "Questions about the Remote Gaming Server, sessions, and API integration.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/rgs/+page.svx",
+      "path": "src/routes/faq/rgs/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/rgs/how-rgs-works",
+      "title": "How does the RGS work?",
+      "description": "How game outcomes are selected using pre-generated Lookup Tables and simulation books.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/rgs/how-rgs-works/+page.svx",
+      "path": "src/routes/faq/rgs/how-rgs-works/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/rgs/how-to-authenticate",
+      "title": "How do I authenticate with the RGS?",
+      "description": "How to authenticate a player session with the Stake Engine Remote Gaming Server using the wallet API.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/rgs/how-to-authenticate/+page.svx",
+      "path": "src/routes/faq/rgs/how-to-authenticate/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/rgs/what-is-session-id",
+      "title": "What is a sessionID?",
+      "description": "Understanding the sessionID used in Stake Engine RGS API calls and how it relates to player authentication.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/rgs/what-is-session-id/+page.svx",
+      "path": "src/routes/faq/rgs/what-is-session-id/+page.svx"
+    },
+    {
+      "collection": "source",
+      "route": "/faq/rgs/when-to-call-end-round",
+      "title": "When do I need to call end-round?",
+      "description": "Understanding how round completion works in the RGS - when to call /wallet/end-round and when the round is automatically completed.",
+      "url": "https://github.com/engineio/docs/blob/main/src/routes/faq/rgs/when-to-call-end-round/+page.svx",
+      "path": "src/routes/faq/rgs/when-to-call-end-round/+page.svx"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stake Engine Studio"
+  short_description: "Build, debug, and publish Engine Studio games"
+  default_prompt: "Use $stake-engine-studio to inspect this game's math and frontend, verify its RGS integration, and prepare an evidence-backed Studio submission."
